@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+}
+
+.site-wrapper{
+    display: grid;
+    grid-template-columns: .5fr 3fr;
+}
+.header{
+    height: 200px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: .75fr, 1fr;
+    background-color: yellow;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px; 
+    background-color: #3498db; 
+    color: #fff; 
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.header-top{
+    display: grid;
+    grid-column: span 4;
+    grid-template-columns: auto auto 1fr auto auto;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 10px;
+    background-color: green;
+}
+.header-top > h1{
+    font-size: 1rem;
+}
+.header-top > button{
+    grid-column-start: 3;
+    width: 100px;
+    justify-self: end;
+}
+.submit-button{
+    grid-column: 1;
+}
+#search{
+    grid-column: span 3;
+    width: 600px;
+    padding-right: 20px;
+}
+
+.sidebar{
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    background: lightblue;
+    grid-row: span 4;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main-wrapper{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    background: lightgray;
+    gap: 10px;
+    height: 100vh;
+}
+.projects{
+    display: grid;
+    grid-column: span 2;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    background-color: yellow;
+}
+.projects-title{
+    grid-column: span 2;
+}
+.annoucments{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 5px;
+    background-color: green;
+}
+.trending{  
+    display: grid;
+    grid-column-start: 3;
+    gap: 10px;
+    background-color: red;
+}
+
+.card{
+    background: lightblue;
+}
+.card-title,
+.annoucment-title,
+.trending-title {
+    margin-bottom: 10px;
+}
+
+.card-content,
+.annoucment-content,
+.trending-content {
+    font-size: 14px;
+}
