@@ -10,6 +10,7 @@ body{
 .site-wrapper{
     display: grid;
     grid-template-columns: .5fr 3fr;
+    gap: 10px;
 }
 .header{
     height: 200px;
@@ -21,15 +22,7 @@ body{
     background-color: yellow;
 }
 .button {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 50px; 
-    background-color: #3498db; 
-    color: #fff; 
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
+   
 }
 .header-top{
     display: grid;
@@ -45,7 +38,7 @@ body{
 }
 .header-top > button{
     grid-column-start: 3;
-    width: 100px;
+    width: auto;
     justify-self: end;
 }
 .submit-button{
@@ -71,7 +64,7 @@ body{
     display: grid;
     grid-column-start: 2;
     grid-column-end: 4;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     background: lightgray;
     gap: 10px;
@@ -83,17 +76,23 @@ body{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 10px;
-    background-color: yellow;
+    background-color: gray;
 }
 .projects-title{
     grid-column: span 2;
+    font-size: 1.5rem;
 }
 .annoucments{
+    grid-column: 3;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 5px;
     background-color: green;
+    height: 500px;
+}
+.annoucment-title-h1{
+    font-size: 1.5rem;
 }
 .trending{  
     display: grid;
@@ -104,11 +103,16 @@ body{
 
 .card{
     background: lightblue;
+    height: 150px;
+    width: 350px;
+    justify-self: center;
+    border-radius: 5%;
 }
 .card-title,
 .annoucment-title,
 .trending-title {
     margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 .card-content,
