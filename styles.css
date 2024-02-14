@@ -17,13 +17,38 @@ body{
     grid-column-start: 2;
     grid-column-end: 4;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: .75fr, 1fr;
-    background-color: yellow;
+    background-color: white
 }
-.button {
-   
+.header span{
+    font-weight: bold;
 }
+
+.name{
+    font-size: 1.5rem;
+}
+
+.button{
+    width: 100%;
+    max-width: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #3498db;
+    height: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid #3498db;
+    border-radius: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: #2980b9; 
+    border-color: #2980b9; 
+    color: #ffffff; 
+  }
 .header-top{
     display: grid;
     grid-column: span 4;
@@ -31,10 +56,17 @@ body{
     grid-template-rows: 1fr;
     align-items: center;
     gap: 10px;
-    background-color: green;
+    background-color: white
+}
+.buttons-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+    padding-right: 35px;
 }
 .header-top > h1{
     font-size: 1rem;
+    padding-right: 50px;
 }
 .header-top > button{
     grid-column-start: 3;
@@ -47,7 +79,11 @@ body{
 #search{
     grid-column: span 3;
     width: 600px;
+    height: 25px;
     padding-right: 20px;
+    border: none;
+    background: lightgray;
+    border-radius: 10px;
 }
 
 .sidebar{
@@ -65,14 +101,14 @@ body{
     grid-column-start: 2;
     grid-column-end: 4;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    background: lightgray;
+    grid-template-rows: auto;
+    background: yellow;
     gap: 10px;
     height: 100vh;
 }
 .projects{
     display: grid;
-    grid-column: span 2;
+    grid-row-start: 2;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 10px;
